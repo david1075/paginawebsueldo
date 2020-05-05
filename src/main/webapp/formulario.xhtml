@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>ingresar datos empleado</title>
+    </h:head>
+    <h:body>
+        
+        <h:form>
+            
+       
+        <h:graphicImage url = "resources/usuario.jpg" height="15%" width="15%" />
+       
+
+
+
+        
+            <p>
+                <h:outputText value = "Cedula: " />
+                <h:inputText value = "#{formulario.cedula}"   />
+            </p>
+              
+            <p>
+                <h:outputText value = "nombre: " />
+                <h:inputText value = "#{formulario.nombre}"   /> 
+            </p>
+            
+             <p>
+                <h:outputText value = "Apellido: " />
+                <h:inputText value = "#{formulario.apellido}"   /> 
+            </p>
+            
+             <p>
+                <h:outputText value = "Fecha Nacimiento: " />
+                <h:inputText value = "#{formulario.fechaNacimiento}"   /> 
+            </p>
+            
+            <p>
+                <h:outputText value = "Dias Trabajados: " />
+                <h:inputText value = "#{formulario.diasTrabajados}"   /> 
+            </p>
+            
+            <p>
+                <h:outputText value = "Sueldo Base: " />
+                <h:inputText value = "#{formulario.sueldoBase}"   /> 
+            </p>
+            
+            <p>
+                <h:outputLabel for="chkIdiomas" value="Idiomas que habla"/>
+                <h:selectManyCheckbox id="chkIdiomas" label="chkIdiomas" value="#{formulario.idioma}">
+                    <f:selectItem itemLabel="Ingles" itemValue="ingles"/>
+                    <f:selectItem itemLabel="Aleman" itemValue="aleman"/>
+                    <f:selectItem itemLabel="Frances" itemValue="frances"/>
+                    <f:selectItem itemLabel="Holandes" itemValue="holandes"/>
+                    <f:selectItem itemLabel="Mandarin" itemValue="mandarin"/>
+                    <f:selectItem itemLabel="Italiano" itemValue="italiano"/>
+                </h:selectManyCheckbox>
+                <h:message for="chkIdiomas"/>
+                
+            </p>
+           
+
+            
+            <p>
+                <h:selectOneRadio value = "#{formulario.nivelEstudio}" >
+                <f:selectItem itemValue ="primaria" itemLabel ="primaria" />
+                <f:selectItem itemValue ="secundaria" itemLabel ="secundaria" />
+                <f:selectItem itemValue ="tecnico" itemLabel ="tecnico" />
+                <f:selectItem itemValue ="tecnologo" itemLabel ="tecnologo" />
+                <f:selectItem itemValue ="profesional" itemLabel ="profesional" />
+                <f:selectItem itemValue ="magister" itemLabel ="magister" />
+                </h:selectOneRadio >
+            </p>
+           
+
+
+            
+
+
+        <h:form>
+            <h:commandButton value = "ejecutar" action= "#{resultado.calcular()}"/> 
+        </h:form>
+                       
+         </h:form>
+
+    </h:body>
+</html>
+

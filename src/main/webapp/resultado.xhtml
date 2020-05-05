@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <p>
+            <h:outputText value = "Cedula: " />
+            <h:outputText value = "#{resultado.formulario.cedula}" />
+            
+        </p>
+        
+         <p>
+            <h:outputText value = "Nombre: " />
+            <h:outputText value = "#{resultado.formulario.nombre}" />
+        </p>
+        
+         <p>
+            <h:outputText value = "Apellido: " />
+            <h:outputText value = "#{resultado.formulario.apellido}" />
+        </p>
+        
+        <p>
+            <h:outputText value = "Fecha Nacimiento: " />
+            <h:outputText value = "#{resultado.formulario.fechaNacimiento}" />
+        </p>
+        
+         <p>
+            <h:outputText value = "dias trabajados: " />
+            <h:outputText value = "#{resultado.formulario.diasTrabajados}" />
+        </p>
+        
+         <p>
+            <h:outputText value = "cantidad de idiomas que maneja: " />
+            <h:outputText value = "#{resultado.cantidadIdioma}" />
+        </p>
+        
+         <p>
+            <h:outputText value = "sueldo base por dia: " />
+            <h:outputText value = "#{resultado.formulario.sueldoBase}" />
+        </p>
+        
+        <p>
+            <h:outputText value = "nivel escolaridad: " />
+            <h:outputText value = "#{resultado.formulario.nivelEstudio}" />
+        </p>
+        
+       
+        
+         <p>
+             
+            <h:outputText value = "sueldo : " />
+            <h:outputText value = "#{resultado.total}" />
+        </p>
+       
+        
+        
+    </h:body>
+</html>
+
