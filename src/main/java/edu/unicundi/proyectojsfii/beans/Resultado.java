@@ -17,7 +17,6 @@ import javax.inject.Inject;
 @RequestScoped
 public class Resultado  {
     
-    private int cantidadIdioma;
     private int total;
    
     /**
@@ -31,7 +30,6 @@ public class Resultado  {
     
     public String calcular (){
         total = 0;
-        cantidadIdioma = formulario.getIdioma().length;
         if(formulario.getNivelEstudio().equals("tecnico")){
             total= formulario.getDiasTrabajados()*5000;
         }else if(formulario.getNivelEstudio().equals("tecnologo")){
@@ -56,16 +54,6 @@ public class Resultado  {
     public void setTotal(int total) {
         this.total = total;
     }
-
-    public int getCantidadIdioma() {
-        return cantidadIdioma;
-    }
-
-    public void setCantidadIdioma(int cantidadIdioma) {
-        this.cantidadIdioma = cantidadIdioma;
-    }
-
-    
 
     public Formulario getFormulario() {
         return formulario;
